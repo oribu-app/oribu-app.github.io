@@ -1,0 +1,96 @@
+/**
+ * Customize default theme styling by overriding CSS variables:
+ * https://github.com/vuejs/vitepress/blob/main/src/client/theme-default/styles/vars.css
+ */
+/**
+ * Colors
+ * -------------------------------------------------------------------------- */
+
+// Oribu's "Series" blue - a neutral pick among the app's six per-media-type colors
+// (games #7B1FA2, manga #E91E63, webtoon #00BCD4, series #1976D2, movies #FF6F00, books #388E3C).
+$themeColor = #1976d2
+
+:root {
+  --vp-c-brand-1: $themeColor
+  --vp-c-brand-2: shade($themeColor, 10%)
+  --vp-c-brand-3: shade($themeColor, 20%)
+  --vp-c-brand-soft: alpha($themeColor, 0.14)
+  --vp-c-brand-dimm: alpha($themeColor, 0.08)
+  --vp-c-brand-border: alpha($themeColor, 0.3)
+  --vp-c-brand-light: tint($themeColor, 20%)
+  --vp-c-brand-lighter: tint($themeColor, 40%)
+  --vp-c-brand-lightest: tint($themeColor, 60%)
+  --vp-c-brand-dark: shade($themeColor, 25%)
+  --vp-c-brand-darker: shade($themeColor, 50%)
+  --vp-c-brand-darkest: shade($themeColor, 75%)
+  --vp-button-brand-bg: var(--vp-c-brand-darker)
+}
+
+.dark {
+  // Brighter tint so links/buttons keep enough contrast on dark backgrounds
+  --vp-c-brand-1: tint($themeColor, 35%)
+  --vp-c-brand-2: tint($themeColor, 20%)
+  --vp-c-brand-3: $themeColor
+}
+
+/**
+ * Component: Home
+ * -------------------------------------------------------------------------- */
+
+:root {
+  --vp-home-hero-name-color: transparent
+  --vp-home-hero-name-background: -webkit-linear-gradient(120deg, var(--vp-c-brand-1) 30%, var(--vp-c-brand-dark))
+  --vp-home-hero-image-background-image: linear-gradient(-45deg, var(--vp-c-brand-light) 50%, var(--vp-c-brand-lighter) 50%)
+  --vp-home-hero-image-filter: blur(40px)
+}
+
+.dark {
+  --vp-home-hero-image-background-image: linear-gradient(-45deg, var(--vp-c-brand-darker) 25%, var(--vp-c-brand-darkest) 25%)
+}
+
+@media (min-width 640px) {
+  :root {
+    --vp-home-hero-image-filter: blur(56px)
+  }
+}
+
+@media (min-width 960px) {
+  :root {
+    --vp-home-hero-image-filter: blur(72px)
+  }
+}
+
+.VPFooter {
+  .divider {
+    color: var(--vp-c-divider)
+  }
+}
+
+/**
+ * Component: Custom Block
+ * -------------------------------------------------------------------------- */
+
+:root {
+  --vp-custom-block-tip-border: var(--vp-c-brand-1)
+  --vp-custom-block-tip-text: var(--vp-c-brand-darker)
+  --vp-custom-block-tip-bg: var(--vp-c-brand-dimm)
+}
+
+.dark {
+  --vp-custom-block-tip-border: var(--vp-c-brand-1)
+  --vp-custom-block-tip-text: var(--vp-c-brand-lightest)
+  --vp-custom-block-tip-bg: var(--vp-c-brand-dimm)
+}
+
+/**
+ * Component: Links
+ * -------------------------------------------------------------------------- */
+
+.vp-doc a {
+  text-decoration: none
+
+  &:hover {
+    text-decoration: underline
+    text-underline-offset: 2px
+  }
+}

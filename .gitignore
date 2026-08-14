@@ -1,0 +1,11 @@
+*.log
+.DS_Store
+.env
+.env.*
+.idea
+.vscode
+node_modules
+dist
+website/src/.vitepress/cache
+website/src/.vitepress/dist
+website/.cache

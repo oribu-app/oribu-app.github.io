@@ -1,0 +1,65 @@
+{
+  "name": "oribu-website",
+  "type": "module",
+  "version": "1.0.0",
+  "private": true,
+  "packageManager": "pnpm@10.20.0",
+  "description": "Official website for the Oribu app.",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oribu-app/oribu-app.github.io.git"
+  },
+  "bugs": {
+    "url": "https://github.com/oribu-app/oribu-app.github.io/issues"
+  },
+  "engines": {
+    "node": ">=22",
+    "pnpm": ">=10"
+  },
+  "scripts": {
+    "preinstall": "npx only-allow pnpm",
+    "test": "pnpm lint && pnpm build",
+    "dev": "vitepress dev src",
+    "build": "vitepress build src",
+    "preview": "vitepress preview src",
+    "lint": "pnpm lint:es && pnpm lint:mdl && pnpm lint:style",
+    "lint:fix": "pnpm lint:es:fix && pnpm lint:style:fix",
+    "lint:es": "eslint .",
+    "lint:es:fix": "eslint . --fix",
+    "lint:mdl": "markdownlint \"**/*.md\" \".github/**/*.md\" --enable sentences-per-line --disable MD025 MD033",
+    "lint:style": "cross-env NODE_OPTIONS='--no-deprecation' stylelint '**/*.{styl,vue}' 'src/.vitepress/**/*.{styl,vue}'",
+    "lint:style:fix": "cross-env NODE_OPTIONS='--no-deprecation' stylelint --fix '**/*.{styl,vue}' 'src/.vitepress/**/*.{styl,vue}'",
+    "refresh:releases": "node --experimental-strip-types src/.vitepress/config/releaseData.ts"
+  },
+  "dependencies": {
+    "@octokit/rest": "22.0.1",
+    "@octokit/types": "16.0.0",
+    "luxon": "3.7.2",
+    "markdown-it": "14.1.0"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^6.2.0",
+    "@types/luxon": "3.7.1",
+    "@types/markdown-it": "14.1.2",
+    "@types/node": "24.10.0",
+    "cross-env": "^10.1.0",
+    "eslint": "9.39.1",
+    "markdownlint": "0.39.0",
+    "markdownlint-cli": "0.45.0",
+    "sentences-per-line": "0.3.0",
+    "stylelint": "16.25.0",
+    "stylelint-stylus": "1.0.0",
+    "stylus": "0.64.0",
+    "typescript": "5.7.3",
+    "vitepress": "1.6.4",
+    "vue": "3.5.24"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm lint-staged"
+  },
+  "lint-staged": {
+    "*.{styl,vue}": "stylelint --fix",
+    "*.{html,json}": "prettier --write"
+  }
+}

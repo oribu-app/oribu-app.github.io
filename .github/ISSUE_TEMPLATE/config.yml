@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 📱 Oribu app issues
+    url: https://github.com/oribu-app/oribu-app/issues
+    about: For issues with the Oribu app itself, not this website

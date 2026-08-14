@@ -1,0 +1,19 @@
+name: 🐞 Website issue
+description: Report a bug on the Oribu website (broken link, wrong download, layout issue...)
+labels: [bug]
+body:
+  - type: input
+    id: page
+    attributes:
+      label: Page URL
+      placeholder: https://oribu-app.github.io/download/
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: What's wrong?
+      description: Describe the issue you found.
+    validations:
+      required: true
