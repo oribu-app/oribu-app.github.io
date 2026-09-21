@@ -16,6 +16,11 @@ const nav: DefaultTheme.NavItem[] = [
     ],
   },
   {
+    text: 'Troubleshooting',
+    link: '/troubleshooting/',
+    activeMatch: '/troubleshooting/',
+  },
+  {
     text: 'Privacy',
     link: '/privacy/',
     activeMatch: '/privacy/',
