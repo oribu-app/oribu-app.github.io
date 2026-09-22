@@ -51,6 +51,12 @@ importers:
       markdownlint-cli:
         specifier: 0.45.0
         version: 0.45.0
+      postcss-html:
+        specifier: ^1.8.1
+        version: 1.8.1
+      postcss-styl:
+        specifier: ^0.12.3
+        version: 0.12.3
       sentences-per-line:
         specifier: 0.3.0
         version: 0.3.0
