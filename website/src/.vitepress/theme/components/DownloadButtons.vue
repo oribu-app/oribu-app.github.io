@@ -7,12 +7,12 @@ const downloadInformation = computed(() => ({
   nightly: {
     tagName: release.nightly.tag_name ?? 'r0000',
     asset: (release.nightly.assets ?? [])
-      .find(a => /^hobbiesvault-r\d{1,}\.apk/.test(a.name)),
+      .find(a => /^oribu-r\d{1,}\.apk/.test(a.name)),
   },
   stable: {
     tagName: release.stable.tag_name ?? 'v0.0.0',
     asset: (release.stable.assets ?? [])
-      .find(a => /^hobbiesvault-v\d+\.\d+\.\d+\.apk/.test(a.name)),
+      .find(a => /^oribu-v\d+\.\d+\.\d+\.apk/.test(a.name)),
   },
 }))
 
