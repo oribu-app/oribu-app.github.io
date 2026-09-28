@@ -29,18 +29,21 @@ replaces the built-in one. Use the **Test connection** button to confirm it was 
 
 ## My Steam library or achievements aren't showing
 
-Add your SteamID64 in **Settings → Integrations → Steam** (your own Steam Web API key is
-optional). Make sure your Steam profile and game details are set to **Public** in your Steam
+Add your SteamID64 and your Steam Web API key (get one at
+[steamcommunity.com/dev/apikey](https://steamcommunity.com/dev/apikey)) in
+**Settings → Integrations → Steam**. Make sure your Steam profile and game details are set to **Public** in your Steam
 privacy settings, otherwise the API has nothing to return.
 
 ## Setting up the optional integrations
 
 These are all optional and free — Oribu works without them. Only the Steam, RetroAchievements
 and Hardcover ones are about *your* account; the rest already have built-in keys. Add each one in
-**Settings → Integrations** and use **Test connection** to confirm it was accepted.
+**Settings → Integrations** and tap the test button on its card to confirm it was accepted.
+If you replaced a built-in key with your own, the reset button next to it goes back to Oribu's key.
 
-- **RetroAchievements** (achievements for retro games): enter your RetroAchievements
-  username. Achievements show up on games whose platform is NES, SNES, N64, GameCube, GBA, DS,
+- **RetroAchievements** (achievements for retro games): log in at
+  [retroachievements.org](https://retroachievements.org/), open **Settings → Authentication**,
+  copy your **Web API Key** and enter it together with your username. Achievements show up on games whose platform is NES, SNES, N64, GameCube, GBA, DS,
   PS1, PS2 or PSP and that you have already played with RetroAchievements enabled.
 - **SteamGridDB** (alternative covers, via **"..." → Change cover** on a game) already works
   with the built-in key. To use your own, log in at [steamgriddb.com](https://www.steamgriddb.com/),

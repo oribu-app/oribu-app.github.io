@@ -33,10 +33,10 @@ when you actively search for or view an item:
   book search
 - **SteamGridDB** - community-made game covers, used when a game has no cover and when you
   pick one with "Change cover"
-- **Steam** - if you optionally configure your SteamID, to read your public library, playtime
-  and achievement data
-- **RetroAchievements** - if you optionally configure your RetroAchievements username, to read
-  your public achievement progress for retro games
+- **Steam** - if you optionally configure your SteamID and Steam Web API key, to read your
+  public library, playtime and achievement data
+- **RetroAchievements** - if you optionally configure your RetroAchievements username and API
+  key, to read your achievement progress for retro games
 
 These requests contain only what is needed to perform the search or lookup (e.g. a title, or an
 external ID already returned by one of these services) - never your Oribu library as a whole.
@@ -50,8 +50,8 @@ activate if you provide the relevant identifier or key in Settings.
 ## Why some platforms aren't supported
 
 Official releases include Oribu's own API keys for search and metadata, so these requests are
-made with the app's key, not an account of yours. Your SteamID and RetroAchievements username
-are only used to read the progress you already made public on those services.
+made with the app's key, not an account of yours. Account integrations (Steam,
+RetroAchievements, Hardcover) always use your own key, and only read data from your own account.
 
 Every optional integration in Oribu uses a **personal API key** that the service itself issues
 for this purpose (Steam, IGDB, SteamGridDB, RetroAchievements, Hardcover). These keys are
