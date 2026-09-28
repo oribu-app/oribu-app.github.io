@@ -6,29 +6,55 @@ editLink: false
 
 # Troubleshooting
 
-Oribu stores your library locally and works fully offline, but search and syncing with
-external services rely on a few free API keys that the app does not ship with.
-This page covers the most common problems and how to fix them.
+Oribu stores your library locally and works fully offline. Search and metadata use API keys
+that come built into the official releases, so they work with no setup; you only add your own
+accounts to sync your personal progress. This page covers the most common problems and how to
+fix them.
 
 ## I can't find any movies, series or games when I search
 
-Manga/webtoon search (AniList) and book search (Google Books) already work with no setup.
-Movies, series and games need your own free key, added in **Settings → Integrations**:
+Official releases (from GitHub or the nightly channel) include built-in keys for movies, series
+and games, so search should work right away. If it doesn't:
 
-- **Movies and series** need a TMDB Read Access Token. Create a free account at
-  [themoviedb.org](https://www.themoviedb.org/), request an API key from your account
-  settings, and paste the token into the TMDB field.
-- **Games** need an IGDB Client ID and Client Secret, created from a free app on the
-  [Twitch Developer Console](https://dev.twitch.tv/console/apps).
+- Check your internet connection and try again — the built-in keys are shared by everyone, so
+  a service may occasionally rate-limit requests for a few minutes.
+- If you built Oribu yourself, it has no built-in keys. Add your own free keys in
+  **Settings → Integrations**: a TMDB Read Access Token from
+  [themoviedb.org](https://www.themoviedb.org/) for movies and series, and an IGDB Client ID and
+  Client Secret from a free app on the [Twitch Developer Console](https://dev.twitch.tv/console/apps)
+  for games.
 
-After saving a key, use the **Test connection** button on that service's card to confirm it
-was accepted before searching again.
+You can also add your own key to any service in **Settings → Integrations** at any time — it
+replaces the built-in one. Use the **Test connection** button to confirm it was accepted.
 
 ## My Steam library or achievements aren't showing
 
-Add your Steam Web API key and SteamID64 in **Settings → Integrations → Steam**. Make sure
-your Steam profile and game details are set to **Public** in your Steam privacy settings,
-otherwise the API has nothing to return.
+Add your SteamID64 in **Settings → Integrations → Steam** (your own Steam Web API key is
+optional). Make sure your Steam profile and game details are set to **Public** in your Steam
+privacy settings, otherwise the API has nothing to return.
+
+## Setting up the optional integrations
+
+These are all optional and free — Oribu works without them. Only the Steam, RetroAchievements
+and Hardcover ones are about *your* account; the rest already have built-in keys. Add each one in
+**Settings → Integrations** and use **Test connection** to confirm it was accepted.
+
+- **RetroAchievements** (achievements for retro games): enter your RetroAchievements
+  username. Achievements show up on games whose platform is NES, SNES, N64, GameCube, GBA, DS,
+  PS1, PS2 or PSP and that you have already played with RetroAchievements enabled.
+- **SteamGridDB** (alternative covers, via **"..." → Change cover** on a game) already works
+  with the built-in key. To use your own, log in at [steamgriddb.com](https://www.steamgriddb.com/),
+  open **Preferences → API** and generate a key.
+- **Hardcover** (extra book search source): log in at [hardcover.app](https://hardcover.app/),
+  open **Settings → API** and copy your API token (with or without the `Bearer` prefix) into the
+  Hardcover field. It's only used when Google Books and Open Library find nothing.
+
+## Why isn't PlayStation, Xbox, GOG or Epic library sync supported?
+
+These platforms don't offer a safe way to connect an app without using your real account
+login. Connecting that way would mean handing Oribu your sign-in session and could put your
+account at risk of being banned. We won't add them until the platforms provide an official way
+to do it. In the meantime, you can still add these games and log playtime and trophies by hand.
 
 ## An item's status or progress looks out of date
 

@@ -27,10 +27,16 @@ when you actively search for or view an item:
 - **IsThereAnyDeal** - game price/deal information
 - **AniList** - manga/webtoon metadata and, if you optionally configure your AniList username,
   reading-progress sync from your public AniList list
-- **MangaDex** - fallback manga/webtoon search and chapter counts
+- **MangaDex** and **MangaBaka** - fallback manga/webtoon search and chapter counts
 - **Google Books** and **Open Library** - book metadata
-- **Steam** and **PSN** - if you optionally configure your Steam/PSN identifiers, to read your
-  public library, playtime and trophy/achievement data
+- **Hardcover** - if you optionally configure a Hardcover API token, as an extra fallback for
+  book search
+- **SteamGridDB** - community-made game covers, used when a game has no cover and when you
+  pick one with "Change cover"
+- **Steam** - if you optionally configure your SteamID, to read your public library, playtime
+  and achievement data
+- **RetroAchievements** - if you optionally configure your RetroAchievements username, to read
+  your public achievement progress for retro games
 
 These requests contain only what is needed to perform the search or lookup (e.g. a title, or an
 external ID already returned by one of these services) - never your Oribu library as a whole.
@@ -38,8 +44,26 @@ Each of these third parties has its own privacy policy governing how it handles 
 receives; we have no control over their practices.
 
 You can use most of Oribu's tracking features without configuring any of the optional
-integrations above (AniList sync, Steam, PSN) - those only activate if you provide the relevant
-identifier in Settings.
+integrations above (AniList sync, Steam, RetroAchievements, SteamGridDB, Hardcover) - those only
+activate if you provide the relevant identifier or key in Settings.
+
+## Why some platforms aren't supported
+
+Official releases include Oribu's own API keys for search and metadata, so these requests are
+made with the app's key, not an account of yours. Your SteamID and RetroAchievements username
+are only used to read the progress you already made public on those services.
+
+Every optional integration in Oribu uses a **personal API key** that the service itself issues
+for this purpose (Steam, IGDB, SteamGridDB, RetroAchievements, Hardcover). These keys are
+separate from your account password, can be revoked at any time from the service's own settings,
+and only grant read access to data you already chose to make available.
+
+PlayStation Network, Xbox, GOG and Epic Games Store don't offer an official API like this. The
+only way to read your library or trophies there is to sign in with your real account session
+through unofficial endpoints, which means handling your login credentials and risking your
+account being flagged or banned. Oribu doesn't do that, and won't add these platforms unless they
+publish an official, key-based API. You can still log games, playtime and trophies from any
+platform by hand.
 
 ## Crash reporting
 

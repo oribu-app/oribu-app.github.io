@@ -18,9 +18,9 @@ customMetaTitle: Oribu
 
 features:
   - title: Games
-    details: Track playtime, achievements and trophies across Steam, PlayStation and beyond.
+    details: Track playtime, achievements and trophies on any platform, with Steam and RetroAchievements sync.
   - title: Manga & Webtoons
-    details: Sync reading progress with AniList, with MangaDex as a fallback source.
+    details: Sync reading progress with AniList, with MangaDex and MangaBaka as fallback sources.
   - title: Series & Movies
     details: Automatic status updates as shows end, get renewed, or wait on a new season.
   - title: Books
