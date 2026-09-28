@@ -71,10 +71,14 @@ to do it. In the meantime, you can still add these games and log playtime and tr
 ## How do I back up my library?
 
 Go to **Settings → Data → Backup**. Pick a folder (for example one synced by your cloud storage
-app), then tap **Back up now** — Oribu saves your whole library there as a JSON file that never
-leaves your device. **Automatic backup** can do it daily or weekly, keeping the last five. To bring
-a library back (on a new phone, for example), use **Restore a backup** and pick the file; covers
-and details are downloaded again right after.
+app), then tap **Back up now** and choose what to include — library items, watched episodes, book
+quotes, playthroughs, movie lists, app settings and, if you want, your API keys and accounts.
+Oribu saves it there as a JSON file that never leaves your device. **Automatic backup** can run
+daily, every 2 days or weekly (or be left manual only), keeping up to five files.
+
+To bring a library back (on a new phone, for example), use **Restore a backup** and pick the file:
+Oribu shows what it holds before replacing anything. Covers and details are downloaded again right
+after, and if the backup includes settings, the app restarts to apply them.
 
 ## An item's status or progress looks out of date
 
