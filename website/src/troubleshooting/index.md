@@ -31,16 +31,25 @@ replaces the built-in one. Use the **Test connection** button to confirm it was 
 
 Add your SteamID64 and your Steam Web API key (get one at
 [steamcommunity.com/dev/apikey](https://steamcommunity.com/dev/apikey)) in
-**Settings → Integrations → Steam**. Make sure your Steam profile and game details are set to **Public** in your Steam
+**Settings → Tracking → Steam**. Make sure your Steam profile and game details are set to **Public** in your Steam
 privacy settings, otherwise the API has nothing to return.
 
 ## Setting up the optional integrations
 
-These are all optional and free — Oribu works without them. Only the Steam, RetroAchievements
-and Hardcover ones are about *your* account; the rest already have built-in keys. Add each one in
-**Settings → Integrations** and tap the test button on its card to confirm it was accepted.
-If you replaced a built-in key with your own, the reset button next to it goes back to Oribu's key.
+These are all optional and free — Oribu works without them.
 
+- **Settings → Integrations** holds the keys used for search and metadata. They already have
+  built-in keys; add your own only to replace one (the reset button goes back to Oribu's key).
+- **Settings → Tracking** holds *your* accounts, grouped by hobby (games, anime and manga, movies
+  and series, books). Each one can **update automatically** with the daily refresh or only when you
+  tap **Sync now** — which first saves a backup of your library if a backup folder is set
+  (Settings → Data). A sync only ever moves things forward: it never lowers progress or a status,
+  and never overwrites a rating or date you set.
+
+Tap the test button on a card to confirm a key or account was accepted.
+
+- **AniList** (reading and watching progress): enter your AniList username — your profile's lists
+  need to be public.
 - **RetroAchievements** (achievements for retro games): log in at
   [retroachievements.org](https://retroachievements.org/), open **Settings → Authentication**,
   copy your **Web API Key** and enter it together with your username. Achievements show up on games whose platform is NES, SNES, N64, GameCube, GBA, DS,
