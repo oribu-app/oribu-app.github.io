@@ -59,6 +59,14 @@ login. Connecting that way would mean handing Oribu your sign-in session and cou
 account at risk of being banned. We won't add them until the platforms provide an official way
 to do it. In the meantime, you can still add these games and log playtime and trophies by hand.
 
+## How do I back up my library?
+
+Go to **Settings → Data → Backup**. Pick a folder (for example one synced by your cloud storage
+app), then tap **Back up now** — Oribu saves your whole library there as a JSON file that never
+leaves your device. **Automatic backup** can do it daily or weekly, keeping the last five. To bring
+a library back (on a new phone, for example), use **Restore a backup** and pick the file; covers
+and details are downloaded again right after.
+
 ## An item's status or progress looks out of date
 
 Oribu refreshes your library's cached data automatically in the background, but you can force
