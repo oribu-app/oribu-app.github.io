@@ -13,6 +13,6 @@ import ChangelogsList from "@theme/components/ChangelogsList.vue";
 
 # Changelogs
 
-Changelogs of all Oribu releases, which are also available [on GitHub](https://github.com/oribu-app/oribu-app/releases).
+Changelogs of all Oribu releases, which are also available [on GitHub](https://github.com/oribu-app/oribu/releases).
 
 <ChangelogsList />

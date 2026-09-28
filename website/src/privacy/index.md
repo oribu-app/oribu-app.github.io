@@ -78,4 +78,4 @@ periodically for any changes.
 ## Contact us
 
 If you have any questions about this privacy policy, please [open an issue on
-GitHub](https://github.com/oribu-app/oribu-app/issues).
+GitHub](https://github.com/oribu-app/oribu/issues).

@@ -87,7 +87,7 @@ an immediate refresh from **Settings → Data → Update all**.
 
 ## Still stuck?
 
-Open an issue on [GitHub](https://github.com/oribu-app/oribu-app/issues) describing what you
+Open an issue on [GitHub](https://github.com/oribu-app/oribu/issues) describing what you
 expected and what happened instead. Tapping the version number in **Settings → About** copies
 useful debug info (app version, Android version, device model) that you can paste into the
 issue.

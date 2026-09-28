@@ -10,7 +10,7 @@ const themeConfig: DefaultTheme.Config = {
   socialLinks: [
     {
       icon: 'github',
-      link: 'https://github.com/oribu-app/oribu-app',
+      link: 'https://github.com/oribu-app/oribu',
       ariaLabel: 'Project GitHub',
     },
   ],

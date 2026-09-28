@@ -37,10 +37,10 @@ export function formatChangelog(md: MarkdownIt, body: string | null | undefined,
 
   const flavored = text
     .replace(/(?<=\(|(, ))@(.*?)(?=\)|(, ))/g, '[@$2](https://github.com/$2)')
-    .replace(/#(\d+)/g, '[#$1](https://github.com/oribu-app/oribu-app/issues/$1)')
-    .replace(/\b([0-9a-f]{7,10})\b/gi, '[$1](https://github.com/oribu-app/oribu-app/commit/$1)')
+    .replace(/#(\d+)/g, '[#$1](https://github.com/oribu-app/oribu/issues/$1)')
+    .replace(/\b([0-9a-f]{7,10})\b/gi, '[$1](https://github.com/oribu-app/oribu/commit/$1)')
     .replace(/<!-->/g, '')
-    .replace('https://github.com/oribu-app/oribu-app/releases', '/changelogs/')
+    .replace('https://github.com/oribu-app/oribu/releases', '/changelogs/')
     .replace(/https:\/\/github.com\/oribu-app\/oribu-app\/releases\/tag\/(.*)/g, '#$1')
     .trim()
 

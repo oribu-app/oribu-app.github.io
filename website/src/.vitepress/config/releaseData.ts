@@ -5,11 +5,11 @@ import process from 'node:process'
 import { fileURLToPath } from 'node:url'
 import { Octokit } from '@octokit/rest'
 
-// Stable/beta releases live in oribu-app/oribu-app; nightly builds are published to the
-// separate oribu-app/oribu-nightly repo (see oribu-app's build_push.yml), so this repo's own
+// Stable/beta releases live in oribu-app/oribu; nightly builds are published to the
+// separate oribu-app/oribu-nightly repo (see oribu's build_push.yml), so this repo's own
 // release list stays limited to stable/beta.
 const APP_OWNER = 'oribu-app'
-const APP_REPO = 'oribu-app'
+const APP_REPO = 'oribu'
 const NIGHTLY_REPO = 'oribu-nightly'
 
 const cacheFile = resolve(dirname(fileURLToPath(import.meta.url)), '../../../.cache/github-releases.json')

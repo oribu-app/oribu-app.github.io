@@ -29,6 +29,6 @@ features:
     details: No account, no server of ours. Your library lives on your device.
   - title: Open source
     details: Free and open source, licensed under Apache 2.0.
-    link: https://github.com/oribu-app/oribu-app
+    link: https://github.com/oribu-app/oribu
     linkText: View source
 ---
